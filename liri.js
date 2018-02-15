@@ -17,7 +17,7 @@ for (var i = 3; i < process.argv.length; i++){
 };
 
 function getTweets(){
-	client.get("statuses/user_timeline", "makejckenzie", function (error, tweets, response) {
+	client.get("statuses/user_timeline", "@makejckenzie", function (error, tweets, response) {
 		if(!error) {
 			console.log("These are your tweets: \n");
 			for (var x=0; x <= 19; x++){
@@ -64,6 +64,7 @@ function getMovie() {
 			}
 			console.log("Country: " + (movie.Country));
 			console.log("Language(s)" + (movie.Language));
+			console.log("Plot: " + (movie.Plot));
 			console.log("Actors: " + (movie.Actors));
 			console.log("______________________________\n")
 		};
